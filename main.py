@@ -5,10 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Allow Android requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Later restrict in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
